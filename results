@@ -1,55 +1,85 @@
-Evaluation Results:
-
-Donald Trump:
-POS Triplets: 202 | Samples: [('Trump', 'on syndicated', 'Howard Stern Show'), ('Trump', 'attend', 'Biden'), ('ProPublica', 'reported', 'Internal Revenue Service'), ('WHO', 'announced', 'U.S.'), ('Trump', 'contested found for countersued', 'Carroll')]
-DEP Triplets: 26 | Samples: [('Trump', 'opened', 'Harrah'), ('Republicans', 'joined', 'Democrat'), ('Trump John W. Walter', 'formed', 'County Building Supply'), ('Trump', 'criticized', 'WHO'), ('Hillary Clinton', 'led', 'Trump')]
-
-Ruth Bader Ginsburg:
-POS Triplets: 172 | Samples: [('Ginsburg', 'wrote for in', 'Arizona'), ('Clinton', 'looking increase', 'Court'), ('Ginsburg', 'dictated to', 'Clara Spera'), ('Court', 'split', '5–4'), ('Ruth Bader Ginsburg', 'worked for', 'Social Security Administration')]
-DEP Triplets: 17 | Samples: [('Congress', 'passed', 'Judgeship Act'), ('Ginsburg', 'received', 'Achievement Award'), ('= U.S. Court', 'passed', 'Judgeship Act'), ('Ginsburg', 'criticized', 'nominee Donald Trump'), ('Bryant Johnson', 'trained', 'Ginsburg')]
-
-J.K. Rowling:
-POS Triplets: 122 | Samples: [('Ford Anglia', 'provided from for', 'Harris'), ('Stone', 'introduces', 'Harry Potter'), ('Ron Weasley', 'defeat', 'Lord Voldemort'), ('Arantes', 'separated on', 'November'), ('Rowling', 'completed', 'Harry Potter')]
-DEP Triplets: 18 | Samples: [('Nancy Stouffer', 'sued', 'Rowling'), ('Rowling', 'released', 'Ickabog'), ('Rowling', 'returned', 'Ripple'), ('Rowling', 'met', 'journalist Jorge Arantes'), ('John Nettleship', 'described', 'Anne')]
-
-LLM Output Example:
-(Donald John Trump; Served as; President of the United States)
-(Trump; Defeated; Hillary Clinton)
-(Trump; Met; Kim Jong Un)
-(Scholars; Ranked; Trump)
-(Trump; Lost; Joe Biden)
-(Trump; Was shot; Assassination attempt)
-(Trump; Began his second presidency; Pardoning)
-(Trump; Signed; Numerous executive orders)
-(Trump; Implemented; Mass deportation)
+Processing Donald Trump...
+Processing Ruth Bader Ginsburg...
+Processing J.K. Rowling...
 
 Evaluation Results:
 
 Donald Trump:
-POS Triplets: 202 | Samples: [('Trump', 'signed', 'Laken Riley Act'), ('Kelly', 'succeeded by', 'Mick Mulvaney'), ('Meta', 'agreed pay settle filed by', 'Trump'), ('Trudeau', 'met with', 'Trump'), ('Trump', 'began by pardoning', 'January')]
-DEP Triplets: 26 | Samples: [('Trump', 'signed', 'Tax Cuts'), ('Trump', 'signed', 'Riley Act'), ('Trump', 'sued', 'ABC News'), ('Republicans', 'joined', 'Democrat'), ('Trump John W. Walter', 'formed', 'County Building Supply')]
+POS Triplets: 194 | Samples: [('Trump', 'described', 'NATO'), ('Trump', 'promised protect for', 'Medicare'), ('Congress', 'passed with for in', 'February'), ('Trump', 'began by pardoning', 'January'), ('Latino', 'of raping in', 'Central Park')]
+DEP Triplets: 25 | Samples: [('Trump', 'ordered', 'U.S. Government'), ('Trump', 'opened', 'Harrah'), ('Trump', 'withdrew', 'U.S.'), ('Trump', 'signed', 'Riley Act'), ('Trump', 'attended', 'Forest School')]
 
 Ruth Bader Ginsburg:
-POS Triplets: 172 | Samples: [('Congress', 'amend', 'Title VII'), ('DC Circuit', 'vacated by', 'Judge Harold Leventhal'), ('New York Times', 'referred to of', 'Court'), ('Ginsburg', 'joined of', 'McGirt'), ('Martin', 'died of from on', 'June')]
-DEP Triplets: 17 | Samples: [('Bader', 'married', 'Ginsburg'), ('Opperman Foundation', 'established', 'Ginsburg Woman'), ('Justice Felix Frankfurter', 'rejected', 'Ginsburg'), ('scholar Cass Sunstein', 'characterized', 'Ginsburg'), ('Kate McKinnon', 'portrayed', 'Ginsburg')]
+POS Triplets: 172 | Samples: [('Democrats', 'lose of', 'Senate'), ('Ginsburg', 'administered of to', 'Vice President Al Gore'), ('Ginsburg', 'called on', 'Congress'), ('Ginsburg', 'wrote in', 'Cutter'), ('US', 'tank', 'Berggruen Institute')]
+DEP Triplets: 17 | Samples: [('Ruth Bader', 'attended', 'Cornell University'), ('President Bill Clinton', 'nominated', 'Ginsburg'), ('Ginsburg', 'received', 'Achievement Award'), ('Opperman Foundation', 'established', 'Ginsburg Woman'), ('Ginsburg', 'released', 'Women')]
 
 J.K. Rowling:
-POS Triplets: 122 | Samples: [('Harry', 'draw', 'Sword'), ('Rowling', 'appointed', 'Officer'), ('Bloomsbury', 'published', 'Philosopher'), ('Harry Potter', 'influenced by of as', 'Lewis'), ('Stone', 'released in', 'United States')]
-DEP Triplets: 18 | Samples: [('Rowling', 'met', 'journalist Jorge Arantes'), ('Rowling', 'returned', 'Ripple'), ('Harry', 'escapes', 'Dursleys'), ('Rowling', 'released', 'Ickabog'), ('Rowling', 'left', 'Christopher Little Literary Agency')]
+POS Triplets: 122 | Samples: [('Rowlings', 'settled in', 'Yate'), ('Harry Potter', 'span of dedicated to of', 'Harry Potter'), ('Rowling', 'established', 'Volant Charitable Trust'), ('Rowling', 'moved to in', 'Clapham Junction'), ('Beasts', 'Find', 'Quidditch')]
+DEP Triplets: 18 | Samples: [('Harry', 'escapes', 'Dursleys'), ('Sean Harris', 'owned', 'turquoise Ford Anglia'), ('Forbes', 'named', 'Rowling'), ('Rowling', 'established', 'Volant Charitable Trust'), ('Rowling', 'read', 'Chronicles')]
 
-LLM Output Example:
-1. (Donald John Trump, was born, June 14, 1946)
-2. (Donald John Trump, served as, 47th president of the United States)
-3. (Donald John Trump, served as, 45th president)
-4. (Donald John Trump, graduated from, University of Pennsylvania)
-5. (Donald John Trump, became president of, family's real estate business)
-6. (Donald John Trump, launched, side ventures)
-7. (Donald John Trump, hosted and co-produced, The Apprentice)
-8. (Donald John Trump, campaigned as, political outsider)
-9. (Donald John Trump, met with, Kim Jong Un)
-10. (Donald John Trump, signed, CARES Act stimulus)
-11. (Donald John Trump, was impeached, abuse of power)
-12. (Donald John Trump, was impeached, obstruction of Congress)
-13. (Donald John Trump, lost, 2020 presidential election)
-14. (Donald John Trump, was convicted of, falsifying business records)
-15. (Donald John Trump, was sentenced to, penalty-free discharge)
+LLM Output for page Donald Trump
+**POS Extractor** 
+1. Number of triplets found: 15
+2. 5 random samples:
+    - (Donald John Trump, serving as, 47th president of the United States)
+    - (Donald John Trump, won, 2016 presidential election)
+    - (Trump, downplayed, severity of COVID-19 pandemic)
+    - (Trump, appointed, three Supreme Court justices)
+    - (Trump, met with, North Korean leader Kim Jong Un)
+
+**Dependency Extractor**
+1. Number of triplets found: 12
+2. 5 random samples:
+    - (Donald John Trump, is, American politician)
+    - (Trump, became, president of his family's real estate business)
+    - (Trump, lost, 2020 presidential election)
+    - (Trump, attended, private Kew-Forest School)
+    - (Trump, transferred to, Wharton School of the University of Pennsylvania)
+
+LLM Output for page Ruth Bader Ginsburg
+**POS Extractor:**
+- Total Triplets: 17
+- Sample Triplets:
+    - (Joan Ruth Bader Ginsburg, was, an American lawyer and jurist)
+    - (Joan Ruth Bader Ginsburg, was, the first Jewish woman)
+    - (Joan Ruth Bader Ginsburg, was, the second woman)
+    - (Joan Ruth Bader Ginsburg, earned, her bachelor's degree)
+    - (Joan Ruth Bader Ginsburg, became, a professor)
+
+**Dependency Extractor:**
+- Total Triplets: 22
+- Sample Triplets:
+    - (Joan Ruth Bader Ginsburg, was, an associate justice)
+    - (Joan Ruth Bader Ginsburg, was, the first Jewish woman)
+    - (Joan Ruth Bader Ginsburg, was, the second woman)
+    - (Joan Ruth Bader Ginsburg, became, a professor)
+    - (Joan Ruth Bader Ginsburg, was, one of three major rightward shifts)
+
+LLM Output for page J.K. Rowling
+**POS extractor**
+
+- Total number of triplets found: 5
+
+- Random sample (5 triplets):
+
+(Joanne Rowling, authored, Harry Potter)
+(J. K. Rowling , known, Joanne Rowling)
+(Rowling, established, Volant Charitable Trust)
+(Rowling, supported, at-risk women and children)
+(Rowling, opposed, Scottish independence)
+
+
+**Dependency extractor**
+
+- Total number of triplets found: 8
+
+- Random sample (5 triplets):
+
+(Joanne Rowling, worked, Amnesty International)
+(Rowling, conceived, Harry Potter Series)
+(Rowling, has, OBE)
+(Rowling, wrote, Cormoran Strike)
+(Forbes, named, Rowling)
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1738490071.454816 1808613 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+
+Process finished with exit code 0

@@ -1,4 +1,3 @@
-import os
 import spacy
 import wikipedia
 import random
@@ -80,24 +79,20 @@ def dep_extractor(doc):
                     if h1.head.dep_ == "ROOT" and \
                             h1.dep_ == "nsubj" and \
                             h2.dep_ == "dobj":
+                        subject = " ".join(t.text for t in subj_tokens)
                         relation = h1.head.text
-                        triplets.append(
-                            (" ".join(t.text for t in subj_tokens),
-                             relation,
-                             " ".join(t.text for t in obj_tokens))
-                        )
+                        obj = " ".join(t.text for t in obj_tokens)
+                        triplets.append((subject, relation, obj))
 
                 # Condition 2: Prepositional phrase
                 elif h1.head == h2.head.head and \
                         h1.dep_ == "nsubj" and \
                         h2.head.dep_ == "pobj" and \
                         h2.head.head.dep_ == "prep":
+                    subject = " ".join(t.text for t in subj_tokens)
                     relation = f"{h1.head.text} {h2.head.head.text}"
-                    triplets.append(
-                        (" ".join(t.text for t in subj_tokens),
-                         relation,
-                         " ".join(t.text for t in obj_tokens))
-                    )
+                    obj = " ".join(t.text for t in obj_tokens)
+                    triplets.append((subject, relation,obj))
     return triplets
 
 
@@ -133,13 +128,19 @@ def evaluate_pages(pages):
 # ========================
 def llm_extractor(text):
     prompt = f"""
-    Extract 15 factual (Subject, Relation, Object) triplets from this text.
+    Extract (Subject, Relation, Object) triplets from the text below using two extractors: POS and dependency extractors.
+    
     Follow these rules:
     1. Subject and Object must be proper nouns (names of people/places)
-    2. Relation should be a verb phrase
-    3. Output format: (Subject; Relation; Object)
-
-    Text: {text[:3000]}
+    2. Relation must be a verb phrase
+    
+    Then do these steps:
+    1. Report how many total triplets did you find for each extractor. (number) 
+    2. For each extractor, sample 5 random triplets from what you've found.(5 triplets)
+    
+    Output format: (Subject, Relation, Object)
+    
+    The Text: {text[:4000]}
     """
 
     model = genai.GenerativeModel('gemini-pro')
@@ -163,9 +164,8 @@ if __name__ == "__main__":
         print(f"DEP Triplets: {data['dep']['count']} | Samples: {data['dep']['samples']}")
 
     # Part 4: LLM Comparison (example with one page)
-    page_content = wikipedia.page("Donald Trump").content
-    llm_output = llm_extractor(page_content)
-    print("\nLLM Output Example:")
-    print(llm_output)
-
-    # Note: Manually verify samples from printed output for questions 3-5
+    for page in wikipedia_pages:
+        page_content = wikipedia.page(page).content
+        llm_output = llm_extractor(page_content)
+        print(f"\nLLM Output for page {page}")
+        print(llm_output)
